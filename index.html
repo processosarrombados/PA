@@ -44,12 +44,12 @@ body {
 .container {
     background: #ffffff;
     padding: 5vw; /* Usa unidades flexíveis */
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 30px; /* Arredonda os cantos */
     width: 90%;
     max-width: 500px;
     text-align: center;
     z-index: 1;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1); 
 }
 
 /* Cabeçalhos */
@@ -111,6 +111,35 @@ button {
 button:hover {
     background: #555;
 }
+
+/* Estilo básico para o link */
+.planilha-link {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .planilha-link:hover {
+            background-color: #555;
+        }
+
+        .planilha-link {
+            padding: 10px 20px;
+            background-color: red; /* Cor vermelha */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .planilha-link:hover {
+            background-color: #cc0000; /* Cor vermelha mais escura ao passar o mouse */
+        }
 
 /* Responsividade para telas maiores (tablets e desktops) */
 @media (min-width: 768px) {
@@ -186,8 +215,18 @@ button:hover {
             </select>
 
             <button type="submit">Enviar</button>
+
+      <!-- Link clicável para abrir a planilha -->
+      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNast4172h-twcOWgcSuAYf3cKQYJyZf4nYX6WvnTGGgp50-P3pgSySE6eYgNs8o-OMwlSZn0mk_QF/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+      target="_self" 
+      class="planilha-link">
+       Acesse aqui a planilha com os seus resultados
+   </a>
+    </div>
         </form>
     </div>
+
+    
 
     <script>
         document.getElementById("feedbackForm").addEventListener("submit", function(event) {
@@ -206,6 +245,9 @@ button:hover {
 
             this.reset();
         });
+
+       
+    
     </script>
 </body>
 </html>
